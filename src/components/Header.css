@@ -41,3 +41,20 @@ img {
     object-fit: cover;
     transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 }
+
+.content {
+    width:40rem;
+    margin: -10rem 30rem 10rem 30rem;
+    background-color:#2f363c;
+    color:white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    font-family: 'Times New Roman';
+    position:absolute;
+    transform: translate();
+}
+
+.mainDiv {
+    overflow: visible;
+}
