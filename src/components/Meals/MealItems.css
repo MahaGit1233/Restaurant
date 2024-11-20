@@ -1,0 +1,55 @@
+.Meals {
+    display: flex;
+    margin: 0.3rem 20rem 0 20rem;
+    background-color: white;
+    font-family: 'Times New Roman';
+    border-radius: 12px;
+}
+
+.meal-title {
+    color: black;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: x-large;
+    padding: 5px;
+}
+
+.meal-des {
+    color: black;
+    margin-left: 1rem;
+    font-style: italic;
+    font-size: medium;
+    padding: 5px;
+}
+
+.meal-cost {
+    color: orange;
+    margin-left: 1rem;
+    font-size: large;
+    padding: 5px;
+}
+
+.form {
+    text-align: right;
+    padding: 0.5rem;
+    margin: 1rem 0 0 31rem;
+}
+
+.form button {
+    font: inherit;
+    cursor: pointer;
+    background-color: #8a2b06;
+    border: 1px solid #8a2b06;
+    color: white;
+    padding: 0.25rem 2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.form input {
+    width: 40px;
+    height: 25px;
+    padding: 3px;
+    font-size: 10px;
+}

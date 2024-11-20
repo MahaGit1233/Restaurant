@@ -1,5 +1,5 @@
 import React from "react";
-import './MealItem.css';
+import './MealItems.css';
 
 const MealItems = (props) => {
     return (
@@ -9,6 +9,13 @@ const MealItems = (props) => {
                 <div className="meal-des">{props.description}</div>
                 <div className="meal-cost">₹{props.price}</div>
             </li>
+            <form className="form">
+                <div>
+                    <label htmlFor="amount"><b>Amount  </b></label>
+                    <input id="amount" type="number" placeholder="1" />
+                </div>
+                <button>+Add</button>
+            </form>
         </div>
     );
 }
