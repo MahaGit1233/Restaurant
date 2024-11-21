@@ -1,5 +1,6 @@
 import React from "react";
 import './Header.css';
+import Cart from "../Cart";
 
 const Header = () => {
     return <div className="maindiv">

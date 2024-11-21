@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Layout/Header";
 import MealItemList from "./components/Meals/MealItemList";
+import Cart from "./components/Cart";
 
 const Dummy_Meals = [
   { id: 1, title: 'Dosa', description: 'Along with Peanut Chutney', price: 20 },
@@ -15,6 +16,7 @@ function App() {
   return (
     <div>
       <Header />
+      <Cart />
       <MealItemList meals={meal}/>
     </div>
   );
