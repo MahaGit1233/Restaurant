@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Header from "./components/Layout/Header";
 import MealItemList from "./components/Meals/MealItemList";
 import Cart from "./components/Cart";
@@ -11,14 +11,23 @@ const Dummy_Meals = [
 ];
 
 function App() {
-  const [meal,setMeals]=useState(Dummy_Meals);
+  const [meal, setMeals] = useState(Dummy_Meals);
+  const [cartVisible, setCartVisible] = useState(false);
+
+  const cartHandler = () => {
+    setCartVisible(true);
+  }
+
+  const closeBtnHandler = () => {
+    setCartVisible(false);
+  }
 
   return (
-    <div>
-      <Header />
-      <Cart />
-      <MealItemList meals={meal}/>
-    </div>
+    <Fragment>
+      {cartVisible && <Cart onClose={closeBtnHandler}/>}
+      <Header onConfirm={cartHandler} />
+      <MealItemList meals={meal} />
+    </Fragment>
   );
 }
 

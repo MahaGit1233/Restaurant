@@ -2,11 +2,11 @@ import React from "react";
 import './Header.css';
 import Cart from "../Cart";
 
-const Header = () => {
+const Header = (props) => {
     return <div className="maindiv">
         <header className="header">
             <h1>React Meals</h1>
-            <button>
+            <button onClick={props.onConfirm}>
                 <h2>Your Cart <span>0</span></h2>
             </button>
         </header>
