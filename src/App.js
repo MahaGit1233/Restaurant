@@ -1,7 +1,8 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import Header from "./components/Layout/Header";
 import MealItemList from "./components/Meals/MealItemList";
-import Cart from "./components/Cart";
+import Cart from "./components/Cart/Cart";
+import CartProvider from "./components/store/CartProvider";
 
 const Dummy_Meals = [
   { id: 1, title: 'Dosa', description: 'Along with Peanut Chutney', price: 20 },
@@ -23,11 +24,11 @@ function App() {
   }
 
   return (
-    <Fragment>
+    <CartProvider>
       {cartVisible && <Cart onClose={closeBtnHandler}/>}
       <Header onConfirm={cartHandler} />
       <MealItemList meals={meal} />
-    </Fragment>
+    </CartProvider  >
   );
 }
 
