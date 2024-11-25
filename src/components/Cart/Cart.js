@@ -6,14 +6,23 @@ import CartContext from "../store/cart-context";
 const Backdrop = (props) => {
     const cartCtx = useContext(CartContext);
 
-    const cartItems=cartCtx.items.map((item,index)=>(
-        <div key={index}>
-            <p>{item.title} x {item.quantity}</p>
-            <p>₹{item.price}</p>
+    const deleteFromCartHandler = (id) => {
+        cartCtx.removeItem(id);
+    }
+
+    const cartItems = cartCtx.items.map((item, index) => (
+        <div key={index} className="cartItems">
+            <p style={{ fontWeight: 'bold', fontSize: '22px' }}>{item.title}</p>
+            <div className="cartItemsControls">
+                <p style={{ color: '#8a2b06' }}>₹{item.price} <span>x {item.quantity}</span></p>
+                <div className="controls">
+                    <button className="minus" onClick={()=>deleteFromCartHandler(item.id)}>-</button> <button>+</button>
+                </div>
+            </div>
         </div>
     ));
 
-    const totalAmount=cartCtx.totalAmount.toFixed(2);
+    const totalAmount = cartCtx.totalAmount.toFixed(2);
 
     return <div className="backdrop">
         <div className="cart">
